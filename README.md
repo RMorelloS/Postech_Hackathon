@@ -7,15 +7,27 @@ A entrega do hackathon seguiu o diagrama de classes apresentado abaixo:
 Para esta entrega, foram desenvolvidos 4 microsserviços principais:
 
 ## 1. Gestão de pessoas
+
+Link para o repositório específico do serviço de gestão de pessoas: <https://github.com/RMorelloS/Hackathon_gestaopessoas>
+
 Cadastro, visualização, atualização e exclusão de pessoas
 
 ## 2. Gestão de itens e serviços opcionais:
+
+Link para o repositório específico do serviço de gestão de itens/serviços opcionais: <https://github.com/RMorelloS/Hackathon_gestaoitensservicos>
+
 Cadastro, visualização, atualização e exclusão de itens/serviços opcionais
 
 ## 3. Gestão de localidades/prédios/quartos
+
+Link para o repositório específico do serviço de gestão de localidades/prédios/quartos: <https://github.com/RMorelloS/Hackathon_gestaolocalidades>
+
 Cadastro, visualização, atualização e exclusão de localidades, prédios e quartos
 
 ## 4. Gestão de reservas
+
+Link para o repositório específico do serviço de gestão de reservas: <https://github.com/RMorelloS/Hackathon_gestaoreservas>
+
 Validação das reservas (intersecção com outras reservas, validação dos itens/quartos solicitados)
 Cadastro, visualização, atualização e exclusão de reservas
 Envio de e-mail com confirmação da reserva
