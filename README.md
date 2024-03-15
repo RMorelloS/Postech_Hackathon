@@ -4,6 +4,16 @@ A entrega do hackathon seguiu o diagrama de classes apresentado abaixo:
 
 ![Diagrama_classes_hackathon](https://github.com/RMorelloS/Postech_Hackathon/assets/32580031/66475f44-5303-46c5-9047-4f0d807b90a4)
 
+
+Para tanto, considerou-se as seguintes cardinalidades:
+
+1. Uma pessoa pode realizar uma ou mais reservas (1:N)
+2. Uma localidade possui um ou mais prédios (1:N)
+3. Um prédio possui um ou mais quartos (1:N)
+4. Uma reserva possui um ou mais quartos (1:N)
+5. Uma reserva possui um ou mais serviços opcionais (1:N)
+
+
 Para esta entrega, foram desenvolvidos 4 microsserviços principais:
 
 ## 1. Gestão de pessoas
@@ -32,13 +42,16 @@ Validação das reservas (intersecção com outras reservas, validação dos ite
 Cadastro, visualização, atualização e exclusão de reservas
 Envio de e-mail com confirmação da reserva
 
-Para tanto, considerou-se as seguintes cardinalidades:
+# Tecnologias utilizadas
+Foram utilizadas as seguintes ferramentas:
 
-1. Uma pessoa pode realizar uma ou mais reservas (1:N)
-2. Uma localidade possui um ou mais prédios (1:N)
-3. Um prédio possui um ou mais quartos (1:N)
-4. Uma reserva possui um ou mais quartos (1:N)
-5. Uma reserva possui um ou mais serviços opcionais (1:N)
+1. Spring boot
+2. PostgreSQL
+3. Validação com Hybernate
+4. Docker
 
+Todos os microsserviços acompanham um arquivo Dockerfile. Para gerar a imagem, basta aplicar o comando:
 
-
+```bash
+docker build -t gestaoreservas.latest .
+```
