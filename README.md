@@ -110,3 +110,5 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=hack2024
 ```
+
+### **Importante:** Este repositório contém também um arquivo json com os exemplos de requisições para utilização via postman
