@@ -41,8 +41,14 @@ Cadastro, visualização, atualização e exclusão de localidades, prédios e q
 Link para o repositório específico do serviço de gestão de reservas: <https://github.com/RMorelloS/Hackathon_gestaoreservas>
 
 Validação das reservas (intersecção com outras reservas, validação dos itens/quartos solicitados)
+
 Cadastro, visualização, atualização e exclusão de reservas
-Envio de e-mail com confirmação da reserva
+
+Envio de e-mail com confirmação da reserva. O e-mail gerado é semelhante ao print abaixo:
+
+![image](https://github.com/RMorelloS/Postech_Hackathon/assets/32580031/17707f7d-d289-4502-9196-cd521a992f36)
+
+
 
 # Tecnologias utilizadas
 Foram utilizadas as seguintes ferramentas:
