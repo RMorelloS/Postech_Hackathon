@@ -2,6 +2,8 @@
 
 ## Ricardo Morello Santos - RM 349844
 
+Link para o vídeo: <https://www.youtube.com/watch?v=QhhfbCRM8gw>
+
 A entrega do hackathon seguiu o diagrama de classes apresentado abaixo:
 
 ![Diagrama_classes_hackathon](https://github.com/RMorelloS/Postech_Hackathon/assets/32580031/66475f44-5303-46c5-9047-4f0d807b90a4)
