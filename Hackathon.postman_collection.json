@@ -1,0 +1,728 @@
+{
+	"info": {
+		"_postman_id": "a205abf8-9d4c-4434-9eb4-ef1fdc0f867e",
+		"name": "Hackathon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15251732"
+	},
+	"item": [
+		{
+			"name": "Gestão de Pessoas",
+			"item": [
+				{
+					"name": "Cadastrar pessoa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"paisOrigem\": \"Brasil\",\r\n    \"cpf\": \"29299530041\",\r\n    \"passaporte\": \"ABC123456\",\r\n    \"nomeCompleto\": \"João da Silva\",\r\n    \"dataNascimento\": \"1990-01-01\",\r\n    \"enderecoPaisOrigem\": \"Rua das Flores, 123\",\r\n    \"telefone\": \"(11) 1234-5678\",\r\n    \"email\": \"ricardo_morello@hotmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/gestaoPessoas",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"gestaoPessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter pessoa por CPF",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"cpf\": \"40247193860\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/gestaoPessoas/29299530041",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"gestaoPessoas",
+								"29299530041"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter pessoas cadastradas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"cpf\": \"40247193860\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/gestaoPessoas",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"gestaoPessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar pessoa",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"cpf\": \"40247193860\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/gestaoPessoas/29299530041",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"gestaoPessoas",
+								"29299530041"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar pessoa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"paisOrigem\": \"Chile\",\r\n    \"passaporte\": \"ABC123456\",\r\n    \"nomeCompleto\": \"João da Silva\",\r\n    \"dataNascimento\": \"1990-01-01\",\r\n    \"enderecoPaisOrigem\": \"Rua das Flores, 123\",\r\n    \"telefone\": \"(11) 1234-5678\",\r\n    \"email\": \"joao@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/gestaoPessoas/29299530041",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"gestaoPessoas",
+								"29299530041"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gestão de Itens e Servicos",
+			"item": [
+				{
+					"name": "Obter Itens/Servicos cadastrados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/gestaoItens",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"gestaoItens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Item/Servico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"valorItemServico\": 100.50,\r\n  \"descritivoItemServico\": \"Arborismo\",\r\n  \"dataCompraItemServico\": \"2024-03-13\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/gestaoItens",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"gestaoItens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Item/Servico",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"\":\"\",\r\n    \"\":\"\",\r\n    \"\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/gestaoItens/b90b646e-22a8-4911-80bd-1c9b32f16e09",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"gestaoItens",
+								"b90b646e-22a8-4911-80bd-1c9b32f16e09"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Item/Servico",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"valorItemServico\": 150.30,\r\n  \"descritivoItemServico\": \"Descrição do item ou serviço\",\r\n  \"dataCompraItemServico\": \"2024-03-13\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/gestaoItens/5b7f4a8b-7d15-4e83-b4c5-076a9c0cf948",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"gestaoItens",
+								"5b7f4a8b-7d15-4e83-b4c5-076a9c0cf948"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Item/Servico Valor Zerado",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idItemServico\": \"5b7f4a8b-7d15-4e83-b4c5-076a9c0cf948\",\r\n  \"valorItemServico\": 0,\r\n  \"descritivoItemServico\": \"Descrição do item ou serviço\",\r\n  \"dataCompraItemServico\": \"2024-03-13\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/gestaoItens/5b7f4a8b-7d15-4e83-b4c5-076a9c0cf948",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"gestaoItens",
+								"5b7f4a8b-7d15-4e83-b4c5-076a9c0cf948"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gestão de Localidades",
+			"item": [
+				{
+					"name": "Obter todas as localidades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/gestaoLocalidades",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"gestaoLocalidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar localidade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeLocalidade\": \"Nome da Localidade\",\r\n  \"endereco\": \"Endereço da Localidade\",\r\n  \"listaAmenidades\": [\"brinquedos\", \"parque\", \"academia\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/gestaoLocalidades",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"gestaoLocalidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar localidade",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/gestaoLocalidades/2cf6a756-a26b-4257-9000-c14ca872f21c",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"gestaoLocalidades",
+								"2cf6a756-a26b-4257-9000-c14ca872f21c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar localidade",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeLocalidade\": \"Chacara Santo Antonio\",\r\n  \"endereco\": \"Rua das Flores, 123\",\r\n  \"listaAmenidades\": [\"brinquedos para crianças\", \"parque\", \"academia\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/gestaoLocalidades/a7365687-b79b-4e0f-89fb-d406b61d6f46",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"gestaoLocalidades",
+								"a7365687-b79b-4e0f-89fb-d406b61d6f46"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter todos os prédios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/gestaoPredios",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"gestaoPredios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar predio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"localidade\": {\"idLocalidade\": \"2c031bda-6df8-4a54-b4f4-c9882af9b25f\"},\r\n  \"nomePredio\": \"Nome do Prédio\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/gestaoPredios",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"gestaoPredios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar prédio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idLocalidade\": \"a7365687-b79b-4e0f-89fb-d406b61d6f46\",\r\n  \"nomePredio\": \"Nome atualizado do Prédio\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/gestaoPredios/f27c5012-3b9c-4708-8b4a-7ac9393ce07c",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"gestaoPredios",
+								"f27c5012-3b9c-4708-8b4a-7ac9393ce07c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Prédio",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/gestaoPredios/9e18bc6c-6f49-4dbd-8ead-a4a6d086796b",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"gestaoPredios",
+								"9e18bc6c-6f49-4dbd-8ead-a4a6d086796b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter todos os quartos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/gestaoQuartos",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"gestaoQuartos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter quarto por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/gestaoQuartos/c727a323-0e9c-40bb-9951-e904584c675f",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"gestaoQuartos",
+								"c727a323-0e9c-40bb-9951-e904584c675f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar quarto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipoQuarto\": \"Single\",\r\n  \"totalPessoas\": 1,\r\n  \"totalCamas\": 1,\r\n  \"outrosMoveis\": [\"mesa\", \"cadeira\"],\r\n  \"predio\": {\r\n    \"idPredio\": \"6e4dcf95-ebde-40cf-b4b3-94e7973a51cf\"\r\n  },\r\n   \"fimReserva\": null,\r\n  \"inicioReserva\": null,\r\n  \"precoDiaria\": 50\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/gestaoQuartos",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"gestaoQuartos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar quarto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipoQuarto\": \"Duplo\",\r\n  \"totalPessoas\": 1,\r\n  \"totalCamas\": 1,\r\n  \"outrosMoveis\": [\"mesa\", \"cadeira\"],\r\n  \"idPredio\": \"eb554967-b86e-40af-9ba2-3d256e7d43b4\",\r\n  \"fimReserva\": \"2024-04-08\",\r\n  \"inicioReserva\": \"2024-03-29\",\r\n  \"precoDiaria\": 50\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/gestaoQuartos/4ea70e40-bec3-48cd-bf6d-3bff75204a32",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"gestaoQuartos",
+								"4ea70e40-bec3-48cd-bf6d-3bff75204a32"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reservar Quarto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idQuarto\": \"98586033-e0b8-4815-8255-9d65fcc5dc2d\",\r\n  \"dataInicio\": \"2024-03-16\",\r\n  \"dataFim\": \"2024-03-28\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/gestaoQuartos/reservarQuarto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"gestaoQuartos",
+								"reservarQuarto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar quarto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipoQuarto\": \"Single\",\r\n  \"totalPessoas\": 1,\r\n  \"totalCamas\": 1,\r\n  \"outrosMoveis\": [\"mesa\", \"cadeira\"],\r\n  \"predios\": [\r\n    {\r\n      \"idPredio\": \"c2b36432-8cd1-4961-a3ed-11b6a4ffe3d6\"\r\n    }\r\n  ]\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/gestaoQuartos/867547f0-1adb-4e89-8762-0250178c435a",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"gestaoQuartos",
+								"867547f0-1adb-4e89-8762-0250178c435a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gestão de Reservas",
+			"item": [
+				{
+					"name": "Cadastrar reserva",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dataInicio\": \"2024-03-16\",\r\n  \"dataFim\": \"2024-03-28\",\r\n  \"totalPessoas\": 2,\r\n  \"totalQuartos\": 1,\r\n  \"cpf\": \"29299530041\",\r\n  \"listaQuartos\": [\"8786c83a-233c-49c8-b098-f22dd55d906a\", \"678e7f01-f804-4d0a-9634-5907aaf0c4e5\"],\r\n  \"listaItensServicos\": [\"70a03f0b-01e2-42c2-8a73-38e44dcd7a85\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/gestaoReservas",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"gestaoReservas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter reservas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/gestaoReservas",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"gestaoReservas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar reserva",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/gestaoReservas/d47f73e5-4de8-4e8d-b322-b200e80a6ba3",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"gestaoReservas",
+								"d47f73e5-4de8-4e8d-b322-b200e80a6ba3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar reserva",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/gestaoReservas/dd6d9ede-cc29-4188-a420-15ed8b1d587c",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"gestaoReservas",
+								"dd6d9ede-cc29-4188-a420-15ed8b1d587c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
