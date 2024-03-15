@@ -50,8 +50,55 @@ Foram utilizadas as seguintes ferramentas:
 3. Validação com Hybernate
 4. Docker
 
-Todos os microsserviços acompanham um arquivo Dockerfile. Para gerar a imagem, basta aplicar o comando:
+Todos os microsserviços acompanham um arquivo Dockerfile. Para gerar a imagem, basta aplicar os comandos:
 
 ```bash
-docker build -t gestaoreservas.latest .
+docker build -t gestaoreservas:latest .
+docker build -t gestaoitensservicos:latest .
+docker build -t gestaopessoas:latest .
+docker build -t gestaolocalidades:latest .
+```
+
+Em seguida, o arquivo docker-compose abaixo permite executar todas as imagens e a base de dados postgresql:
+
+```bash
+services:
+  api1:
+    image: 'gestaoreservas:latest'
+    container_name: gestaoreservas
+    ports:
+      - "8084:8084"
+    depends_on:
+      - db
+
+  api2:
+    image: 'gestaolocalidades:latest'
+    container_name: gestaolocalidades
+    ports:
+      - "8083:8083"
+    depends_on:
+      - db
+
+  api3:
+    image: 'gestaoitensservicos:latest'
+    container_name: gestaoitensservicos
+    ports:
+      - "8082:8082"
+    depends_on:
+      - db
+
+  api4:
+    image: 'gestaopessoas:latest'
+    container_name: gestaopesssoas
+    ports:
+      - "8081:8081"
+    depends_on:
+      - db
+
+  db:
+    image: 'postgres:13.1-alpine'
+    container_name: dbhackathon
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=hack2024
 ```
